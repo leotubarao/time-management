@@ -2,6 +2,7 @@
   "name": "apontamento-de-horas-react",
   "version": "0.1.1",
   "private": true,
+  "homepage": "https://leotubarao.github.io/apontamento-de-horas-react/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
