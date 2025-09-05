@@ -1,9 +1,9 @@
 {
-  "name": "apontamento-de-horas-react",
+  "name": "time-management",
   "version": "0.1.1",
   "private": true,
   "type": "module",
-  "homepage": "https://leotubarao.github.io/apontamento-de-horas-react/",
+  "homepage": "https://leotubarao.github.io/time-management/",
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-dialog": "^1.1.15",
