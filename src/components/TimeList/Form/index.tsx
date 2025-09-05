@@ -6,13 +6,14 @@ import { timeFormResolver, type TimeFormData } from './schema'
 
 import { Form as FormUI } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
-import { CalendarPick } from '@/components/CalendarPick'
+import { CalendarPicker } from '@/components/CalendarPicker'
 
 export const TimeForm: React.FC = () => {
   const dispatchTime = useActionTimes()
 
   const form = useForm<TimeFormData>({
     resolver: timeFormResolver,
+    mode: "onChange"
   })
 
   const onSubmit = useCallback(({ startTime, endTime }: TimeFormData) => {
@@ -26,14 +27,14 @@ export const TimeForm: React.FC = () => {
         className='flex flex-col gap-4'
         onSubmit={form.handleSubmit(onSubmit)}
       >
-        <div className='flex w-full min-w-0 flex-col md:flex-row gap-6'>
-          <CalendarPick
-            label='Início'
+        <div className='flex w-full flex-col md:flex-row gap-6'>
+          <CalendarPicker
+            label='Start'
             name='startTime'
             control={form.control}
           />
-          <CalendarPick
-            label='Término'
+          <CalendarPicker
+            label='End'
             name='endTime'
             control={form.control}
             errorMessage={form.formState.errors.endTime?.message}
