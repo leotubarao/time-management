@@ -10,7 +10,7 @@ export default defineConfig({
   base: "./",
   publicDir: '../public',
   build: {
-    outDir: "../dist",
+    outDir: "../build",
     emptyOutDir: true,
   },
   resolve: {
